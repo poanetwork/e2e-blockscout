@@ -12,7 +12,7 @@
     "postgres:start": "initdb && pg_ctl -D CAWA_HOME/PostgreSQL/data -l logfile start",
     "postgres:stop": "pkill postgres",
     "stop": "npm run app:stop && npm run ganache:stop",
-    "e2e-poa": "mocha  -b ./test/poa.js",
+    "e2e:balance": "mocha  -b ./test/testBalance.js",
     "build:ganache":"npm run app:stop && npm run ganache:start && npm run postgres:start && "
 
   },
