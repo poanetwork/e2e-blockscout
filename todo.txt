@@ -1,0 +1,14 @@
+
+UI test:
+1. Address page
+2. Transaction page
+3.Block page
+
+Testing scenarios:
+
+1. Transfer Eth -check transaction, block creation
+2. Verify contract
+3. Create token - check transaction, block creation, token balance
+4. Contracts API
+5.Pow
+6.Poa

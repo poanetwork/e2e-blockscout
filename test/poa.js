@@ -1,6 +1,6 @@
 const test = require('selenium-webdriver/testing')
 const assert = require('assert')
-const Utils = require('../utils/utils.js').Utils
+const Utils = require('../helper/utils.js').Utils
 test.describe('', async function () {
   this.timeout(2400000)// 40 min
   this.slow(1800000)
