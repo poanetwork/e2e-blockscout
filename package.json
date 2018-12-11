@@ -8,8 +8,13 @@
     "lint:fix": "eslint . --fix",
     "ganache:start": "ganache-cli --noVMErrorsOnRPCResponse -m 'rally patient fit bunker simple conduct shallow drive pelican offer kid skill'",
     "ganache:stop":"bash ./scripts/stop_port8545.sh",
-    "stop": "npm run ganache:stop",
-    "e2e-poa": "mocha  -b ./test/poa.js"
+    "app:stop": "bash ./scripts/stop_port4000.sh",
+    "postgres:start": "initdb && pg_ctl -D CAWA_HOME/PostgreSQL/data -l logfile start",
+    "postgres:stop": "pkill postgres",
+    "stop": "npm run app:stop && npm run ganache:stop",
+    "e2e-poa": "mocha  -b ./test/poa.js",
+    "build:ganache":"npm run app:stop && npm run ganache:start && npm run postgres:start && "
+
   },
   "author": "",
   "license": "ISC",
