@@ -5,6 +5,7 @@ const { By, Key, webdriver, until } = require('selenium-webdriver')
 const search = By.id('q')
 const searchIcon = By.id('search-icon')
 const navbar = By.id('navbarDropdown')
+const pageName = By.className('card-title')
 
 class Page {
   constructor (driver) {
@@ -131,6 +132,12 @@ class Page {
     logger.info('clickNavbar ')
     return await this.clickElement(navbar, wait)
   }
+
+    async getPageName () {
+        logger.info('getPageName ')
+        const elements =  await this.getElements(pageName)
+        return await elements[0].getText()
+    }
 }
 
 module.exports.Page = Page
